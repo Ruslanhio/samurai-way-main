@@ -1,0 +1,17 @@
+.header {
+    grid-area: h;
+    padding: 0px 30px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e6d7e8+0,9374c9+45,0a0c0b+100 */
+    background: rgb(230,215,232); /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  rgba(230,215,232,1) 0%, rgba(147,116,201,1) 45%, rgba(10,12,11,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  rgba(230,215,232,1) 0%,rgba(147,116,201,1) 45%,rgba(10,12,11,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  rgba(230,215,232,1) 0%,rgba(147,116,201,1) 45%,rgba(10,12,11,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6d7e8', endColorstr='#0a0c0b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    display: flex;
+    align-items: center;
+}
+.header__img {
+    width: 90px;
+    object-fit: cover;
+    object-position: center;
+}

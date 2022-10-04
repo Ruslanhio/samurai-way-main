@@ -1,0 +1,22 @@
+.nav {
+    grid-area: n;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4a929b+12,207cca+39,207cca+39,2989d8+50,7db9e8+68,7db9e8+68 */
+    background: #4a929b; /* Old browsers */
+    background: -moz-linear-gradient(top,  #4a929b 12%, #207cca 39%, #207cca 39%, #2989d8 50%, #7db9e8 68%, #7db9e8 68%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #4a929b 12%,#207cca 39%,#207cca 39%,#2989d8 50%,#7db9e8 68%,#7db9e8 68%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #4a929b 12%,#207cca 39%,#207cca 39%,#2989d8 50%,#7db9e8 68%,#7db9e8 68%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a929b', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */;
+    padding: 30px;
+}
+
+.item a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.item a.active {
+    color: blueviolet;
+    padding-left: 10px;
+
+}
