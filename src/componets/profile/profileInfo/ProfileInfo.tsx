@@ -1,4 +1,5 @@
 import React from 'react';
+import s from './ProfileInfo.module.css'
 
 const ProfileInfo = () => {
     return (
@@ -6,7 +7,7 @@ const ProfileInfo = () => {
             <div>
                 <img src='https://wallpaperaccess.com/full/1551019.jpg'/>
             </div>
-            <div>ava + description</div>
+            <div className={s.description}>ava + description</div>
         </div>
     );
 };

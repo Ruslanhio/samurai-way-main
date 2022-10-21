@@ -1,0 +1,6 @@
+.myPosts {
+    display: flex;
+    padding-left: 10px;
+    justify-content: flex-start;
+    flex-direction: column;
+}
