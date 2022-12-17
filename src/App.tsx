@@ -3,9 +3,11 @@ import './App.css';
 import {Header} from './componets/header/Header';
 import {Navbar} from './componets/navbar/Navbar';
 import {Profile} from './componets/profile/Profile';
-import {Dialogs} from './componets/dialogs/Dialogs';
-import {BrowserRouter, Route} from 'react-router-dom';
-import {ActionType, StoreType} from './componets/redux/state';
+
+import {BrowserRouter, HashRouter, Route, Switch} from 'react-router-dom';
+import {StoreType} from './componets/redux/store';
+import {DialogsContainer} from './componets/dialogs/DialogsContainer';
+import {UsersContainer} from './componets/users/UsersContainer';
 
 
 export type AppPropsType = {
@@ -17,27 +19,26 @@ export type AppPropsType = {
 }
 
 const App: React.FC<AppPropsType> = (props) => {
-    const state = props.store.getState()
-
     return (
         <BrowserRouter>
             <div className="app-wrapper">
                 <Header/>
                 <Navbar/>
                 <div className="app-wrapper-content">
-                    <Route path="/profile" render={() => <Profile
-                        profile={state.profilePage.posts}
-                        message={state.profilePage.messageForNewPost}
-                        dispatch={props.store.dispatch.bind(props.store)}
-                        /*  changeHandler={props.store.changeNewPostText.bind(props.store)}*/
-                        /* addPostCallback={props.store.addPost.bind(props.store)}*//>}/>
-                    <Route path="/dialogs" render={() => <Dialogs
-                        dialogs={state.dialogsPage.dialogs}
-                        messages={state.dialogsPage.messages}
-                        newMessageText={state.dialogsPage.NewMessageText}
-                        dispatch={props.store.dispatch.bind(props.store)}/>}/>
-                </div>
+                    <>
+                    <Route path="/profile" render={() => <Profile/>}/>
 
+                    // {/*  message={state.profilePage.messageForNewPost}
+                      //   dispatch={props.store.dispatch.bind(props.store)}
+                      //   />}/>*/}
+                    // {/* changeHandler={props.store.changeNewPostText.bind(props.store)}
+                      //    addPostCallback={props.store.addPost.bind(props.store)}/>}/>*/}
+
+                    <Route path="/dialogs" render={() => <DialogsContainer />}/>
+                    <Route path="/users" render={() => <UsersContainer />}/>
+
+                    </>
+                </div>
             </div>
         </BrowserRouter>
     )

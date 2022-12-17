@@ -1,7 +1,24 @@
 import React from 'react';
-import {store} from './componets/redux/state'
-import {renderTree} from './renderTree';
+import {AppWithRedux} from './AppWithRedux';
+
+import { store} from './componets/redux/redux-store';
+import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
 
 
-store.subscribe(renderTree)
-renderTree()
+
+
+// export const renderTree = () =>   {
+    ReactDOM.render(
+        <Provider store={store}>
+            <AppWithRedux />
+        </Provider>,
+        document.getElementById('root')
+    );
+// }
+
+
+// store.subscribe(()=>{
+//     renderTree()
+// })
+
